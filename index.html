@@ -19,7 +19,6 @@
             <a href="#about">About Us</a>
         </nav>
     </header>
-
     <section id="hero" class="hero-section">
         <div class="hero-image-overlay">
             <div class="hero-content">
@@ -29,7 +28,6 @@
             </div>
         </div>
     </section>
-
     <section id="how-it-works" class="section">
         <h2>How It Works</h2>
         <div class="how-it-works-image">
@@ -37,7 +35,6 @@
         </div>
         <p>Enter ingredients, select preferences, and get personalized recipes instantly.</p>
     </section>
-
     <section id="features" class="section">
         <h2>Key Features</h2>
         <div class="features-carousel">
@@ -69,7 +66,6 @@
             </div>
         </div>
     </section>
-
     <section id="generate-recipes" class="section">
     <h2>Generate Recipes</h2>
     <div id="recipe-generator" class="recipe-generator">
@@ -78,25 +74,64 @@
         <div class="select-wrapper">
             <select id="cuisine-select" class="recipe-select">
                 <option value="">Select Cuisine</option>
-                <option value="indian">Indian</option>
-                <option value="italian">Italian</option>
-                <option value="chinese">Chinese</option>
-                <option value="mexican">Mexican</option>
-                <option value="continental">Continental</option>
+                <option value="African">African</option>
+                <option value="American">American</option>
+                <option value="British">British</option>
+                <option value="Cajun">Cajun</option>
+                <option value="Caribbean">Caribbean</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Eastern European">Eastern European</option>
+                <option value="European">European</option>
+                <option value="French">French</option>
+                <option value="German">German</option>
+                <option value="Greek">Greek</option>
+                <option value="Indian">Indian</option>
+                <option value="Irish">Irish</option>
+                <option value="Italian">Italian</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Jewish">Jewish</option>
+                <option value="Korean">Korean</option>
+                <option value="Latin American">Latin American</option>
+                <option value="Mediterranean">Mediterranean</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Middle Eastern">Middle Eastern</option>
+                <option value="Nordic">Nordic</option>
+                <option value="Southern">Southern</option>
+                <option value="Spanish">Spanish</option>
+                <option value="Thai">Thai</option>
+                <option value="Vietnamese">Vietnamese</option>
             </select>
             <select id="dietary-select" class="recipe-select">
                 <option value="">Select Dietary</option>
                 <option value="vegetarian">Vegetarian</option>
-                <option value="non-vegetarian">Non-Vegetarian</option>
                 <option value="vegan">Vegan</option>
-                <option value="gluten-free">Gluten-Free</option>
+                <option value="glutenFree">Gluten Free</option>
+                <option value="dairyFree">Dairy Free</option>
+                <option value="lactoOvoVegetarian">Lacto-Ovo Vegetarian</option>
+                <option value="ovoVegetarian">Ovo-Vegetarian</option>
+                <option value="lactoVegetarian">Lacto-Vegetarian</option>
+                <option value="pescetarian">Pescetarian</option>
+                <option value="paleo">Paleo</option>
+                <option value="primal">Primal</option>
+                <option value="lowFodmap">Low FODMAP</option>
+                <option value="whole30">Whole 30</option>
             </select>
             <select id="meal-type-select" class="recipe-select">
                 <option value="">Select Meal Type</option>
+                <option value="main course">Main Course</option>
+                <option value="side dish">Side Dish</option>
+                <option value="dessert">Dessert</option>
+                <option value="appetizer">Appetizer</option>
+                <option value="salad">Salad</option>
+                <option value="bread">Bread</option>
                 <option value="breakfast">Breakfast</option>
-                <option value="lunch">Lunch</option>
-                <option value="dinner">Dinner</option>
-                <option value="snacks">Snacks</option>
+                <option value="soup">Soup</option>
+                <option value="beverage">Beverage</option>
+                <option value="sauce">Sauce</option>
+                <option value="marinade">Marinade</option>
+                <option value="fingerfood">Fingerfood</option>
+                <option value="snack">Snack</option>
+                <option value="drink">Drink</option>
             </select>
             <select id="cooking-time-select" class="recipe-select">
                 <option value="">Select Cooking Time</option>
@@ -126,9 +161,7 @@
         <div id="recipe-detail-nutrition"></div>
         <div id="recipe-detail-tips"></div>
     </div>
-</section>
-</section>
-    
+</section></section>
     <section id="testimonials" class="section">
         <h2>Testimonials</h2>
         <div class="testimonial-grid">
@@ -145,7 +178,6 @@
             </div>
         </div>
     </section>
-
     <section id="pricing" class="section">
         <h2>Pricing</h2>
         <div class="pricing-container">
@@ -182,18 +214,15 @@
             </div>
         </div>
     </section>
-
     <section id="about" class="section">
         <h2>About Us</h2>
         <p>Savoury.AI was born from a passion for simplifying home cooking, conceived by a team of innovative students at the Indian School of Business (ISB) in Hyderabad, Telangana. Our mission is to empower individuals to effortlessly create delicious and personalized meals using the ingredients they have on hand. We believe that everyone, regardless of their culinary expertise, should have the tools to enjoy the art of cooking. Savoury.AI is our commitment to making that vision a reality, one recipe at a time.</p>
-
         <div class="contact-info">
             <h3>Contact Us</h3>
             <p>Email: contact@savouryai.com</p>
             <p>Phone: +91 1234567890</p>
             <p>Location: Hyderabad, Telangana, India</p>
         </div>
-
         <div class="feedback-form">
             <h3>Feedback / Contact Form</h3>
             <form id="contactForm">
@@ -207,7 +236,6 @@
             <div id="formMessage"></div>
         </div>
     </section>
-
     <script>
         document.getElementById('get-started-btn').addEventListener('click', function() {
             document.getElementById('generate-recipes').scrollIntoView({ behavior: 'smooth' });
@@ -219,40 +247,77 @@
             const dietary = document.getElementById('dietary-select').value;
             const mealType = document.getElementById('meal-type-select').value;
             const cookingTime = document.getElementById('cooking-time-select').value;
-            const mealAttributes = document.getElementById('meal-attributes-select').value;
+            const mealAttributes = document.getElementById('meal-attributes-select').value; // We might not use this directly with this Spoonacular endpoint
 
-            // Simulate recipe generation (replace with your actual AI call)
-            const recipes = generateMockRecipes(ingredients, cuisine, dietary, mealType, cookingTime, mealAttributes);
-            displayRecipes(recipes);
+            const apiKey = '22379668fc0642c1b19cc08530434133';
+            const spoonacularApiEndpoint = 'https://api.spoonacular.com/recipes/findByIngredients';
+
+            let apiUrl = `${spoonacularApiEndpoint}?apiKey=${apiKey}&ingredients=${encodeURIComponent(ingredients)}`;
+
+            if (cuisine) {
+                apiUrl += `&cuisine=${encodeURIComponent(cuisine)}`;
+            }
+            // Spoonacular uses specific values for dietary restrictions
+            if (dietary) {
+                apiUrl += `&diet=${encodeURIComponent(dietary)}`;
+            }
+
+            if (mealType) {
+                apiUrl += `&type=${encodeURIComponent(mealType)}`;
+            }
+
+            if (cookingTime) {
+                const timeInMinutes = parseInt(cookingTime);
+                if (!isNaN(timeInMinutes) && cookingTime !== '60+') {
+                    apiUrl += `&maxReadyTime=${timeInMinutes}`;
+                } else if (cookingTime === '60+') {
+                    apiUrl += `&maxReadyTime=90`; // Or some other reasonable upper limit
+                }
+            }
+
+            // 'mealAttributes' like 'healthy', 'quick', 'fancy', 'kid-friendly' might require different Spoonacular endpoints or parameters.
+            // For now, we'll focus on the basic search.
+
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data && Array.isArray(data) && data.length > 0) {
+                        const formattedRecipes = data.map(recipe => ({
+                            id: recipe.id, // Add the ID
+                            title: recipe.title,
+                            image: recipe.image,
+                            ingredients: recipe.usedIngredients.map(ing => ing.originalString).concat(recipe.missedIngredients.map(ing => ing.originalString)),
+                            // Spoonacular's findByIngredients doesn't directly return steps.
+                            // We'll fetch details when the user clicks 'View Recipe'.
+                            steps:,
+                            time: recipe.readyInMinutes ? `${recipe.readyInMinutes} minutes` : 'Unknown',
+                            nutrition: 'Not available (requires another API call)',
+                            tips: 'No tips available (requires another API call)'
+                        }));
+                        displayRecipes(formattedRecipes);
+                    } else {
+                        document.getElementById('recipe-results').innerHTML = '<p>No recipes found based on your criteria.</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching recipes:', error);
+                    document.getElementById('recipe-results').innerHTML = '<p>Error fetching recipes. Please try again later.</p>';
+                });
         });
 
         function generateMockRecipes(ingredients, cuisine, dietary, mealType, cookingTime, mealAttributes) {
-            // Replace with your AI logic
-            return [
-                {
-                    title: 'Mock Recipe 1',
-                    image: 'https://via.placeholder.com/300',
-                    ingredients: ['Ingredient A', 'Ingredient B'],
-                    steps: ['Step 1', 'Step 2'],
-                    time: '30 minutes',
-                    nutrition: 'Calories: 300',
-                    tips: 'Tip 1'
-                },
-                {
-                    title: 'Mock Recipe 2',
-                    image: 'https://via.placeholder.com/300',
-                    ingredients: ['Ingredient C', 'Ingredient D'],
-                    steps: ['Step A', 'Step B'],
-                    time: '45 minutes',
-                    nutrition: 'Calories: 450',
-                    tips: 'Tip 2'
-                }
-            ];
+            console.warn("generateMockRecipes is being called. Ensure your AI service integration is complete.");
+            return;
         }
 
         function displayRecipes(recipes) {
             const resultsDiv = document.getElementById('recipe-results');
-            resultsDiv.innerHTML = ''; // Clear previous results
+            resultsDiv.innerHTML = '';
 
             if (recipes.length === 0) {
                 resultsDiv.innerHTML = '<p>No recipes found.</p>';
@@ -265,7 +330,7 @@
                 recipeDiv.innerHTML = `
                     <h3>${recipe.title}</h3>
                     <img src="${recipe.image}" alt="${recipe.title}" style="max-width: 150px;">
-                    <button class="view-recipe-btn" data-recipe-title="${recipe.title}">View Recipe</button>
+                    <button class="view-recipe-btn" data-recipe-id="${recipe.id}">View Recipe</button>
                 `;
                 resultsDiv.appendChild(recipeDiv);
             });
@@ -273,33 +338,46 @@
             // Add event listeners for view recipe buttons
             document.querySelectorAll('.view-recipe-btn').forEach(button => {
                 button.addEventListener('click', function() {
-                    const recipeTitle = this.getAttribute('data-recipe-title');
-                    const recipe = recipes.find(r => r.title === recipeTitle);
-                    if (recipe) {
-                        displayRecipeDetails(recipe);
-                    }
+                    const recipeId = this.getAttribute('data-recipe-id');
+                    fetchRecipeDetails(recipeId);
                 });
             });
         }
 
-function displayRecipeDetails(recipe) {
-    const recipeDetailContent = document.getElementById('recipe-detail-content');
-    if (!recipeDetailContent) {
-        console.error("Recipe detail content container not found.");
-        return;
-    }
+        function fetchRecipeDetails(recipeId) {
+            const apiKey = '22379668fc0642c1b19cc08530434133';
+            const recipeDetailsEndpoint = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}&includeNutrition=true`;
 
-    document.getElementById('recipe-detail-title').textContent = recipe.title;
-    document.getElementById('recipe-detail-image').src = recipe.image;
-    document.getElementById('recipe-detail-ingredients').innerHTML = '<strong>Ingredients:</strong> ' + recipe.ingredients.join(', ');
-    document.getElementById('recipe-detail-steps').innerHTML = '<strong>Steps:</strong> ' + recipe.steps.join('<br>');
-    document.getElementById('recipe-detail-time').textContent = recipe.time;
-    document.getElementById('recipe-detail-nutrition').innerHTML = '<strong>Nutrition:</strong> ' + recipe.nutrition;
-    document.getElementById('recipe-detail-tips').innerHTML = '<strong>Tips:</strong> ' + recipe.tips;
+            fetch(recipeDetailsEndpoint)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(recipe => {
+                    document.getElementById('recipe-detail-title').textContent = recipe.title;
+                    document.getElementById('recipe-detail-image').src = recipe.image;
+                    document.getElementById('recipe-detail-ingredients').innerHTML = '<strong>Ingredients:</strong> ' + recipe.extendedIngredients.map(ing => ing.originalString).join(', ');
+                    document.getElementById('recipe-detail-steps').innerHTML = '<strong>Instructions:</strong> ' + (recipe.instructions || 'Instructions not available.');
+                    document.getElementById('recipe-detail-time').textContent = recipe.readyInMinutes ? `${recipe.readyInMinutes} minutes` : 'Unknown';
+                    document.getElementById('recipe-detail-nutrition').innerHTML = recipe.nutrition ? '<strong>Nutrition:</strong> ' + JSON.stringify(recipe.nutrition.nutrients.slice(0, 5).map(n => `${n.name}: ${n.amount} ${n.unit}`).join(', ')) : '<strong>Nutrition:</strong> Not available.';
+                    document.getElementById('recipe-detail-tips').innerHTML = recipe.dishTypes ? '<strong>Dish Types:</strong> ' + recipe.dishTypes.join(', ') : '<strong>Dish Types:</strong> Not available.'; // Using dishTypes as a placeholder for tips
 
-    document.getElementById('recipe-detail').style.display = 'block';
-    document.getElementById('recipe-detail').scrollIntoView({ behavior: 'smooth' });
-}
+                    document.getElementById('recipe-detail').style.display = 'block';
+                    document.getElementById('recipe-detail').scrollIntoView({ behavior: 'smooth' });
+                })
+                .catch(error => {
+                    console.error('Error fetching recipe details:', error);
+                    document.getElementById('recipe-detail').style.display = 'none';
+                    alert('Could not fetch recipe details.');
+                });
+        }
+
+        function displayRecipeDetails(recipe) {
+            // This function is now replaced by fetchRecipeDetails which makes an API call
+        }
+
         // Carousel functionality
         document.addEventListener('DOMContentLoaded', function() {
             const carouselSlide = document.querySelector('.carousel-slide');
@@ -312,7 +390,6 @@ function displayRecipeDetails(recipe) {
 
             carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
 
-            // Next Button Click
             nextButton.addEventListener('click', () => {
                 if (counter >= carouselItems.length - 1) return;
                 carouselSlide.style.transition = "transform 0.4s ease-in-out";
@@ -320,7 +397,6 @@ function displayRecipeDetails(recipe) {
                 carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
             });
 
-            // Prev Button Click
             prevButton.addEventListener('click', () => {
                 if (counter <= 0) return;
                 carouselSlide.style.transition = "transform 0.4s ease-in-out";
@@ -368,7 +444,6 @@ function displayRecipeDetails(recipe) {
         });
 
         const sections = document.querySelectorAll('.section');
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
