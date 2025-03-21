@@ -298,20 +298,24 @@ nav a:hover {
 }
 /* Recipe Results */
 .recipe-results {
-    margin-top: 2rem;
+    margin-top: 1rem; /* Reduced margin */
     text-align: left;
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack items vertically */
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    flex-wrap: wrap; /* Allow wrapping onto multiple lines */
     gap: 1rem; /* Space between recipe previews */
+    padding: 0 1rem; /* Add horizontal padding to align with "Generate Recipes" */
 }
 
 .recipe-preview {
     border: 1px solid #ddd;
     padding: 1rem;
     border-radius: 8px;
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Vertically center items */
-    justify-content: space-between; /* Space out title, image, button */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px; /* Fixed width for previews */
+    box-sizing: border-box; /* Include padding in width */
 }
 
 .recipe-preview h3 {
@@ -338,6 +342,7 @@ nav a:hover {
     background-color: #668f66;
 }
 
+/* ... (your existing CSS) ... */
 /* Recipe Detail */
 #recipe-detail {
     text-align: left;
