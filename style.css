@@ -296,6 +296,69 @@ nav a:hover {
         grid-column: 1 / 2;
     }
 }
+/* Recipe Results */
+.recipe-results {
+    margin-top: 2rem;
+    text-align: left;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    gap: 1rem; /* Space between recipe previews */
+}
+
+.recipe-preview {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space out title, image, button */
+}
+
+.recipe-preview h3 {
+    margin: 0;
+}
+
+.recipe-preview img {
+    max-width: 100px;
+    height: auto;
+    margin-left: 1rem;
+}
+
+.view-recipe-btn {
+    background-color: #8fbc8f;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-recipe-btn:hover {
+    background-color: #668f66;
+}
+
+/* Recipe Detail */
+#recipe-detail {
+    text-align: left;
+    margin-top: 2rem;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#recipe-detail img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+#recipe-detail-ingredients,
+#recipe-detail-steps,
+#recipe-detail-nutrition,
+#recipe-detail-tips {
+    margin-bottom: 1rem;
+}
 
 .testimonial-grid {
     display: grid;
