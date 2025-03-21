@@ -282,19 +282,24 @@
             });
         }
 
-        function displayRecipeDetails(recipe) {
-            document.getElementById('recipe-detail-title').textContent = recipe.title;
-            document.getElementById('recipe-detail-image').src = recipe.image;
-            document.getElementById('recipe-detail-ingredients').innerHTML = '<strong>Ingredients:</strong> ' + recipe.ingredients.join(', ');
-            document.getElementById('recipe-detail-steps').innerHTML = '<strong>Steps:</strong> ' + recipe.steps.join('<br>');
-            document.getElementById('recipe-detail-time').textContent = recipe.time;
-            document.getElementById('recipe-detail-nutrition').innerHTML = '<strong>Nutrition:</strong> ' + recipe.nutrition;
-            document.getElementById('recipe-detail-tips').innerHTML = '<strong>Tips:</strong> ' + recipe.tips;
+function displayRecipeDetails(recipe) {
+    const recipeDetailContent = document.getElementById('recipe-detail-content');
+    if (!recipeDetailContent) {
+        console.error("Recipe detail content container not found.");
+        return;
+    }
 
-            document.getElementById('recipe-detail').style.display = 'block';
-            document.getElementById('recipe-detail').scrollIntoView({ behavior: 'smooth' });
-        }
+    document.getElementById('recipe-detail-title').textContent = recipe.title;
+    document.getElementById('recipe-detail-image').src = recipe.image;
+    document.getElementById('recipe-detail-ingredients').innerHTML = '<strong>Ingredients:</strong> ' + recipe.ingredients.join(', ');
+    document.getElementById('recipe-detail-steps').innerHTML = '<strong>Steps:</strong> ' + recipe.steps.join('<br>');
+    document.getElementById('recipe-detail-time').textContent = recipe.time;
+    document.getElementById('recipe-detail-nutrition').innerHTML = '<strong>Nutrition:</strong> ' + recipe.nutrition;
+    document.getElementById('recipe-detail-tips').innerHTML = '<strong>Tips:</strong> ' + recipe.tips;
 
+    document.getElementById('recipe-detail').style.display = 'block';
+    document.getElementById('recipe-detail').scrollIntoView({ behavior: 'smooth' });
+}
         // Carousel functionality
         document.addEventListener('DOMContentLoaded', function() {
             const carouselSlide = document.querySelector('.carousel-slide');
